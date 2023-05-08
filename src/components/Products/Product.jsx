@@ -1,35 +1,21 @@
-import {
-  faHeart,
-  faTrashCan,
-  faXmarkCircle,
-} from "@fortawesome/free-regular-svg-icons";
+import { faHeart, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import Quantity from "../Uitily/Quantity";
 
-const SingleProduct = ({
+const Product = ({
   img,
   title,
   price,
   newProduct,
   vipProduct,
   isFavorite,
-  isCart,
   isList,
 }) => {
   return (
     <div className={`${isList ? "col-12" : "col-6 col-lg-3"}`}>
       <div className="single-product mb-2">
         <div className="product position-relative text-center">
-          {isCart && (
-            <div className="delete position-absolute">
-              <FontAwesomeIcon
-                icon={faXmarkCircle}
-                className="bg-main rounded-5 fs-4"
-              />
-            </div>
-          )}
           <div className={`card position-relative ${isList && "list"}`}>
             <div className="new-vip position-absolute top-0 end-0 p-1">
               {newProduct && (
@@ -47,20 +33,14 @@ const SingleProduct = ({
               </div>
             </Link>
 
-            <div className="icons pt-3 pb-2 d-flex justify-content-end align-items-center gap-3 w-100">
-              {isCart ? (
-                <Quantity />
-              ) : (
-                <>
-                  <div className="btn btn-sm bg-main d-flex align-items-center gap-2 add-card">
-                    <span className="fa-1x">إضافة للعربة</span>
-                    <FontAwesomeIcon
-                      icon={faCartPlus}
-                      className="text-white fs-sm"
-                    />
-                  </div>
-                </>
-              )}
+            <div className="icons pt-3 pb-2 d-flex justify-content-center align-items-center gap-3">
+              <div className="btn btn-sm bg-main d-flex align-items-center gap-2 add-card">
+                <span className="fa-1x">إضافة للعربة</span>
+                <FontAwesomeIcon
+                  icon={faCartPlus}
+                  className="text-white fs-sm"
+                />
+              </div>
               {isFavorite ? (
                 <FontAwesomeIcon icon={faTrashCan} className="fs-5" />
               ) : (
@@ -74,4 +54,4 @@ const SingleProduct = ({
   );
 };
 
-export default SingleProduct;
+export default Product;

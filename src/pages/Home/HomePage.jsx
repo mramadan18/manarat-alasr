@@ -5,6 +5,7 @@ import SliderProductsList from "../../components/SliderProducts/SliderProductsLi
 import ServicesList from "../../components/Service/ServicesList";
 import BrandsList from "../../components/Brand/BrandsList";
 import Footer from "../../components/Footer/Footer";
+import CustomTheme from "../../components/Custom/CustomTheme";
 
 const HomePage = () => {
   return (
@@ -36,6 +37,8 @@ const HomePage = () => {
       />
       <BrandsList />
       <Footer />
+
+      <CustomTheme />
     </>
   );
 };

@@ -3,7 +3,7 @@ import TitlePage from "../../components/Uitily/TitlePage";
 import Footer from "../../components/Footer/Footer";
 import Coupon from "../../components/Uitily/Coupon";
 import { Link } from "react-router-dom";
-import SingleProduct from "../../components/Products/SingleProduct";
+import ProductCart from "../../components/Products/ProductCart";
 
 const CartPage = () => {
   return (
@@ -11,15 +11,12 @@ const CartPage = () => {
       <Header />
       <div className="container my-4">
         <TitlePage title="عربة التسوق" />
-        <SingleProduct
+        <ProductCart
           img={"images/products/product-1.jpg"}
           title={"برامج إدارة المبيعات"}
           price={"1500 ريال"}
-          vipProduct={true}
-          isList={true}
-          isCart={true}
+          isFavorite={false}
         />
-
         <div className="border-dark bg-light p-3 rounded-2">
           <h4>ملخص الطلبية</h4>
           <Coupon />

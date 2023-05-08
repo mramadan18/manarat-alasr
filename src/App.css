@@ -18,6 +18,26 @@
   --main-bg-color: #707070;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
 * {
   font-family: var(--main-font);
 }
@@ -713,3 +733,35 @@ button#retryButton {
   }
 }
 /* End List products */
+
+/* Start Custom Theme */
+.custom {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom.show {
+  right: 0;
+}
+
+.custom .cog {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  transform: translateY(-50%);
+}
+/* End Custom Theme */
