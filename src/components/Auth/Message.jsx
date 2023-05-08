@@ -1,6 +1,3 @@
-import ClientCaptcha from "react-client-captcha";
-import "react-client-captcha/dist/index.css";
-
 const Message = () => {
   return (
     <div className="sms my-5 mx-auto">
@@ -31,10 +28,10 @@ const Message = () => {
             </div>
             <div className="col-12 col-lg-3 mt-3 mt-lg-0">
               <div className="captcha-item d-flex justify-content-center align-items-center">
-                <ClientCaptcha
+                {/* <ClientCaptcha
                   captchaCode={(code) => console.log(code)}
                   backgroundColor="#E1E6E8"
-                />
+                /> */}
               </div>
             </div>
           </div>
