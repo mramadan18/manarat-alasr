@@ -9,7 +9,6 @@ import { useParams } from "react-router-dom";
 import ServicesList from "../../components/Service/ServicesList";
 import SliderProductsList from "../../components/Products/SliderProductsList";
 import Brand from "../../components/Brand/Brand";
-import TitlePage from "../../components/Uitily/TitlePage";
 import CallUs from "../../components/CallUs/CallUs";
 
 const AllCategoriesPage = () => {
