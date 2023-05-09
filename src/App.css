@@ -12,7 +12,7 @@
 
 /* Start Global Style */
 :root {
-  --main-font-family: mothnna;
+  --main-font: mothnna;
   --main-color: rgb(78, 177, 228);
   --main-color-hover: rgb(78, 177, 208);
   --main-color-opacity: rgba(78, 178, 228, 0.3);
@@ -568,7 +568,7 @@ img {
   color: var(--main-color);
 }
 
-.signup .input-container span {
+.input-container span {
   top: 60%;
   left: 10px;
   transform: translateY(-50%);

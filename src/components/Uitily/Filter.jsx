@@ -2,7 +2,6 @@ import { faTh, faThList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Filter = ({ isList, setIsList }) => {
-  console.log(isList);
   return (
     <div className="filter my-4 d-flex justify-content-between align-items-center gap-5">
       <div className="icons w-25 d-flex justify-content-around align-items-center gap-4">

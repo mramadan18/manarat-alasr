@@ -59,7 +59,7 @@ const HeaderLaptop = () => {
               <Link to="/">
                 <img
                   className="img-fluid full-path"
-                  src="images/logo.png"
+                  src="/images/logo.png"
                   alt=""
                 />
               </Link>
@@ -128,7 +128,7 @@ const HeaderLaptop = () => {
               <li className="nav-item dropdown">
                 <NavLink
                   className="nav-link dropdown-toggle text-black d-flex align-items-center gap-1 dropdown-item"
-                  to="/category"
+                  to="/category/121"
                   role="button"
                   data-toggle="dropdown"
                   aria-expanded="false"

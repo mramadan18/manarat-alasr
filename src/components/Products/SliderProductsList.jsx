@@ -56,7 +56,7 @@ const SliderProductsList = ({ title, titleBtn, path }) => {
         >
           <SwiperSlide>
             <SliderProduct
-              img={"images/products/product-1.jpg"}
+              img={"/images/products/product-1.jpg"}
               title={"برامج إدارة المبيعات"}
               price={"1500 ريال"}
               vipProduct={true}
@@ -64,7 +64,7 @@ const SliderProductsList = ({ title, titleBtn, path }) => {
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"images/products/product-2.jpg"}
+              img={"/images/products/product-2.jpg"}
               title={"نظام إدارة مبيعات الذهب"}
               price={"3000 ريال"}
               vipProduct={true}
@@ -72,14 +72,14 @@ const SliderProductsList = ({ title, titleBtn, path }) => {
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"images/products/product-3.jpg"}
+              img={"/images/products/product-3.jpg"}
               title={"جهاز C i5  DELL  مستخدم مجدد مع الشاشة"}
               price={"1350 ريال"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"images/products/product-4.jpg"}
+              img={"/images/products/product-4.jpg"}
               title={"قطعة WiFi ALFA"}
               price={"50 ريال"}
               newProduct={true}
@@ -87,14 +87,14 @@ const SliderProductsList = ({ title, titleBtn, path }) => {
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"images/products/product-5.jpg"}
+              img={"/images/products/product-5.jpg"}
               title={"كيبورد وماوس قيمنق"}
               price={"40 ريال"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"images/products/product-6.jpg"}
+              img={"/images/products/product-6.jpg"}
               title={"قطعة HD WiFi Any Cast"}
               price={"60 ريال"}
               newProduct={true}
@@ -102,14 +102,14 @@ const SliderProductsList = ({ title, titleBtn, path }) => {
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"images/products/product-3.jpg"}
+              img={"/images/products/product-3.jpg"}
               title={"جهاز C i5  DELL  مستخدم مجدد مع الشاشة"}
               price={"1350 ريال"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"images/products/product-4.jpg"}
+              img={"/images/products/product-4.jpg"}
               title={"قطعة WiFi ALFA"}
               price={"50 ريال"}
               newProduct={true}

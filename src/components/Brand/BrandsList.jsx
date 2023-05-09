@@ -52,25 +52,25 @@ const BrandsList = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <Brand img={"images/brands/brand-1.png"} />
+            <Brand img={"/images/brands/brand-1.png"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Brand img={"images/brands/brand-2.png"} />
+            <Brand img={"/images/brands/brand-2.png"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Brand img={"images/brands/brand-3.jpeg"} />
+            <Brand img={"/images/brands/brand-3.jpeg"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Brand img={"images/brands/brand-4.jpeg"} />
+            <Brand img={"/images/brands/brand-4.jpeg"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Brand img={"images/brands/brand-5.jpeg"} />
+            <Brand img={"/images/brands/brand-5.jpeg"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Brand img={"images/brands/brand-6.png"} />
+            <Brand img={"/images/brands/brand-6.png"} />
           </SwiperSlide>
           <SwiperSlide>
-            <Brand img={"images/brands/brand-7.png"} />
+            <Brand img={"/images/brands/brand-7.png"} />
           </SwiperSlide>
         </Swiper>
       </div>

@@ -38,7 +38,7 @@ const App = () => {
           <Route path="sms" element={<Message />} />
           <Route path="email" element={<Email />} />
         </Route>
-        <Route path="/categories" element={<AllCategoriesPage />} />
+        <Route path="/category/:id" element={<AllCategoriesPage />} />
         <Route path="/products" element={<AllProductsPage />} />
         <Route path="/products/:id" element={<ProductDetailsPage />} />
         <Route path="/favorite" element={<FavoritePage />} />

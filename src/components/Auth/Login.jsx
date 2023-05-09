@@ -1,20 +1,12 @@
 import { Link } from "react-router-dom";
+import InputUnrequired from "../Uitily/InputUnrequired";
 
 const Login = () => {
   return (
     <form className="login mx-auto" method="POST">
-      <input
-        className="form-control mb-2"
-        type="text"
-        name="mobile"
-        placeholder="رقم الجوال"
-      />
-      <input
-        className="form-control mb-2"
-        type="password"
-        name="password"
-        placeholder="كلمة المرور"
-      />
+      <InputUnrequired type="text" placeholder="رقم الجوال" />
+      <InputUnrequired type="password" placeholder="كلمة المرور" />
+
       <div className="text-end">
         <Link
           to="/forget-password/sms"

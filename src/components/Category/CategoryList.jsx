@@ -8,9 +8,9 @@ const CategoryList = ({ categoryType }) => {
           <>
             <Category
               img={"images/categories/category-1.png"}
-              title={"الأجهزة وملحقاتها"}
+              title="الأجهزة وملحقاتها"
+              path={"/category/121"}
             />
-
             <Category
               img={"images/categories/category-2.png"}
               title={"برامج حسب الطلب"}
@@ -27,23 +27,23 @@ const CategoryList = ({ categoryType }) => {
         ) : (
           <>
             <Category
-              img={"images/categories/category-5.jpeg"}
+              img={"/images/categories/category-5.jpeg"}
               title={"الأجهزة والشاشات"}
             />
             <Category
-              img={"images/categories/category-6.jpeg"}
+              img={"/images/categories/category-6.jpeg"}
               title={"الطابعات"}
             />
             <Category
-              img={"images/categories/category-7.jpeg"}
+              img={"/images/categories/category-7.jpeg"}
               title={"الأحبار"}
             />
             <Category
-              img={"images/categories/category-8.jpeg"}
+              img={"/images/categories/category-8.jpeg"}
               title={"الاكسسوارات"}
             />
             <Category
-              img={"images/categories/category-9.jpeg"}
+              img={"/images/categories/category-9.jpeg"}
               title={"المستخدم"}
             />
           </>

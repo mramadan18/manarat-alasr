@@ -23,13 +23,13 @@ const SliderAds = () => {
           className="slider"
         >
           <SwiperSlide>
-            <img src="images/slider-1.jpeg" alt="" />
+            <img src="/images/slider-1.jpeg" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="images/slider-1.jpeg" alt="" />
+            <img src="/images/slider-1.jpeg" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="images/slider-1.jpeg" alt="" />
+            <img src="/images/slider-1.jpeg" alt="" />
           </SwiperSlide>
         </Swiper>
       </div>

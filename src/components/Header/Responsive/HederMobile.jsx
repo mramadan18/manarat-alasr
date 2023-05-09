@@ -157,7 +157,7 @@ const HederMobile = () => {
           </li>
           <li className="dropdown-item">
             <NavLink
-              to="/categories"
+              to="/category/121"
               className="d-flex justify-content-between align-items-center w-100 px-2"
             >
               <div className="d-flex align-items-center">
@@ -182,7 +182,7 @@ const HederMobile = () => {
               >
                 <li className="py-2">
                   <NavLink
-                    to="/categories"
+                    to="/category/127"
                     className="rounded-2 px-2 d-flex justify-content-start align-items-center"
                   >
                     <FontAwesomeIcon icon={faAngleDoubleLeft} />
@@ -191,7 +191,7 @@ const HederMobile = () => {
                 </li>
                 <li className="py-2">
                   <NavLink
-                    to="/categories"
+                    to="/category/129"
                     className="rounded-2 px-2 d-flex justify-content-start align-items-center"
                   >
                     <FontAwesomeIcon icon={faAngleDoubleLeft} />
@@ -200,7 +200,7 @@ const HederMobile = () => {
                 </li>
                 <li className="py-2">
                   <NavLink
-                    to="/categories"
+                    to="/category/130"
                     className="rounded-2 px-2 d-flex justify-content-start align-items-center"
                   >
                     <FontAwesomeIcon icon={faAngleDoubleLeft} />
@@ -209,7 +209,7 @@ const HederMobile = () => {
                 </li>
                 <li className="py-2">
                   <NavLink
-                    to="/categories"
+                    to="/category/131"
                     className="rounded-2 px-2 d-flex justify-content-start align-items-center"
                   >
                     <FontAwesomeIcon icon={faAngleDoubleLeft} />
@@ -218,7 +218,7 @@ const HederMobile = () => {
                 </li>
                 <li className="py-2">
                   <NavLink
-                    to="/categories"
+                    to="/category/132"
                     className="rounded-2 px-2 d-flex justify-content-start align-items-center"
                   >
                     <FontAwesomeIcon icon={faAngleDoubleLeft} />
@@ -230,7 +230,7 @@ const HederMobile = () => {
           </li>
           <li className="dropdown-item">
             <NavLink
-              to="/categories"
+              to="/category/124"
               className="rounded-2 px-2 d-flex justify-content-start align-items-center"
             >
               <FontAwesomeIcon icon={faAccusoft} />
@@ -239,7 +239,7 @@ const HederMobile = () => {
           </li>
           <li className="dropdown-item">
             <NavLink
-              to="/categories"
+              to="/category/125"
               className="rounded-2 px-2 d-flex justify-content-start align-items-center"
             >
               <FontAwesomeIcon icon={faAccusoft} />
@@ -248,7 +248,7 @@ const HederMobile = () => {
           </li>
           <li className="dropdown-item">
             <NavLink
-              to="/categories"
+              to="/category/126"
               className="rounded-2 px-2 d-flex justify-content-start align-items-center"
             >
               <FontAwesomeIcon icon={faAccusoft} />
@@ -268,7 +268,7 @@ const HederMobile = () => {
             </Link>
           </div>
           <div className="footer-menu-cat">
-            <Link to="/categories" className="text_conten">
+            <Link to="/category/125" className="text_conten">
               <span className="icon">
                 <FontAwesomeIcon icon={faDesktop} />
               </span>
@@ -276,7 +276,7 @@ const HederMobile = () => {
             </Link>
           </div>
           <div className="footer-menu-cat">
-            <Link to="/categories" className="text_conten">
+            <Link to="/category/122" className="text_conten">
               <span className="icon">
                 <i className="fab fa-whmcs" aria-hidden="true"></i>
                 <FontAwesomeIcon icon={faWhmcs} />
