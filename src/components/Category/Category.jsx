@@ -7,9 +7,7 @@ const Category = ({ img, title }) => {
       className="category d-flex flex-column justify-content-center align-items-center"
     >
       <img src={img} alt={title} style={{ width: "80px" }} />
-      <span className="mt-3" style={{ fontSize: "15px" }}>
-        {title}
-      </span>
+      <span className="mt-3 fs-6">{title}</span>
     </Link>
   );
 };

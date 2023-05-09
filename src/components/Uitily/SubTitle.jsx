@@ -6,7 +6,7 @@ const SubTitle = ({ title, titleBtn, sizeTitle, path }) => {
       <div className={`sub-title ${sizeTitle}`}>{title}</div>
       {titleBtn ? (
         <Link to={path}>
-          <div className="btn bg-main py-0">{titleBtn}</div>
+          <div className="btn bg-main py-0 fs-6">{titleBtn}</div>
         </Link>
       ) : null}
     </div>

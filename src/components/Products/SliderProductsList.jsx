@@ -43,7 +43,7 @@ const SliderProductsList = ({ title, titleBtn, path }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container px-0">
       <div className="products-list mt-2">
         <SubTitle title={title} titleBtn={titleBtn} path={path} />
 

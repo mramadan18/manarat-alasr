@@ -12,10 +12,53 @@
 
 /* Start Global Style */
 :root {
-  --main-font: mothnna;
-  --main-color: #4eb1e4;
-  --main-color-hover: #4ea1d0;
-  --main-bg-color: #707070;
+  --main-font-family: mothnna;
+  --main-color: rgb(78, 177, 228);
+  --main-color-hover: rgb(78, 177, 208);
+  --main-color-opacity: rgba(78, 178, 228, 0.3);
+  --main-bg-color: rgb(112, 112, 112);
+}
+
+html.small {
+  font-size: 14px;
+}
+
+html.medium {
+  font-size: 16px;
+}
+
+html.large {
+  font-size: 18px;
+}
+
+body.green {
+  --main-color: rgb(40, 199, 111);
+  --main-color-hover: rgb(40, 179, 111);
+  --main-color-opacity: rgba(40, 199, 111, 0.3);
+}
+
+body.red {
+  --main-color: rgb(234, 84, 85);
+  --main-color-hover: rgb(214, 84, 85);
+  --main-color-opacity: rgba(234, 84, 84, 0.3);
+}
+
+body.orange {
+  --main-color: rgb(255, 159, 67);
+  --main-color-hover: rgb(235, 159, 67);
+  --main-color-opacity: rgba(255, 159, 67, .3);
+}
+
+body.purple {
+  --main-color: rgb(115, 103, 240);
+  --main-color-hover: rgb(115, 103, 220);
+  --main-color-opacity: rgba(115, 103, 240, 0.5);
+}
+
+body.honey {
+  --main-color: rgb(234, 181, 67);
+  --main-color-hover: rgb(214, 181, 67);
+  --main-color-opacity: rgb(234, 181, 67, 0.3);
 }
 
 /* width */
@@ -38,13 +81,15 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
+
 * {
   font-family: var(--main-font);
 }
 
-html body {
+body {
   font-family: var(--main-font);
-  font-size: 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .bg-main {
@@ -484,7 +529,7 @@ img {
 
 .products-list .swiper-slide .card-desc {
   color: #9d9d9d;
-  font-size: 13px;
+  font-size: 0.8rem;
   margin-bottom: 0;
   line-height: 15px;
   height: 32px;
@@ -492,7 +537,7 @@ img {
 }
 
 .products-list .swiper-slide .card-price {
-  font-size: 13px;
+  font-size: 0.8rem;
 }
 /* End Slider Products */
 
@@ -734,34 +779,170 @@ button#retryButton {
 }
 /* End List products */
 
+/* Start Brands Slider */
+.brands-list .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.brands-list .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brands-list .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* End Brands Slider */
+
 /* Start Custom Theme */
 .custom {
   position: fixed;
   top: 0;
-  right: -400px;
+  left: -400px;
   width: 400px;
   height: 100vh;
   z-index: 1000;
   background-color: white;
   border: 1px solid #ccc;
-  transition: all 0.5s ease-in-out;
+  box-shadow: rgba(47, 43, 61, 0.18) 0px 5px 14px 0px;
+  transition: all 0.5s ease;
 }
 
 .custom.show {
-  right: 0;
+  left: 0;
 }
 
 .custom .cog {
+  right: -45px;
+  width: 45px;
+  height: 40px;
+  transform: translateY(-50%);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.custom-radio {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.custom-radio::before {
+  content: "";
+  display: block;
   position: absolute;
-  top: 50%;
-  left: -25px;
-  width: 25px;
-  height: 25px;
+  top: -11px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.custom-radio:hover::before {
+  box-shadow: 0 0 0 6px var(--main-color-opacity);
+}
+
+input[type="radio"]:checked + .custom-radio:before {
+  border: 4px solid var(--main-color);
+  background-color: white;
+}
+
+.choose-color span {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.choose-color span:first-child {
+  background-color: #4eb1e4;
+}
+
+.choose-color span:nth-child(2) {
+  background-color: #28C76F;
+}
+
+.choose-color span:nth-child(3) {
+  background-color: #ea5455;
+}
+
+.choose-color span:nth-child(4) {
+  background-color: #ff9f43;
+}
+
+.choose-color span:nth-child(5) {
+  background-color: #7367F0;
+}
+
+.choose-color span:last-child {
+  background-color: #eab543;
+}
+
+body.blue .choose-color .blue {
+  transform: scale(1.2);
+}
+
+body.green .choose-color .green {
+  transform: scale(1.2);
+}
+
+body.red .choose-color .red {
+  transform: scale(1.2);
+}
+
+body.orange .choose-color .orange {
+  transform: scale(1.2);
+}
+
+body.purple .choose-color .purple {
+  transform: scale(1.2);
+}
+
+body.honey .choose-color .honey {
+  transform: scale(1.2);
+}
+
+.choose-font-size span {
+  width: 70px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+}
+
+html.small .choose-font-size .small {
   background-color: var(--main-color);
-  border-radius: 5px;
-  transform: translateY(-50%);
+  color: white;
+}
+html.medium .choose-font-size .medium {
+  background-color: var(--main-color);
+  color: white;
+}
+html.large .choose-font-size .large {
+  background-color: var(--main-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .custom {
+    display: none !important;
+  }
 }
 /* End Custom Theme */
