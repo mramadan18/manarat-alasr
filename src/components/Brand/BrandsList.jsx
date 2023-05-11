@@ -42,8 +42,8 @@ const BrandsList = () => {
   };
 
   return (
-    <div className="brands-list py-4">
-      <div className="container">
+    <div className="container">
+      <div className="brands-list py-4">
         <Swiper
           spaceBetween={10}
           slidesPerView={handleSliderView()}

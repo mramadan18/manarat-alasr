@@ -19,47 +19,66 @@
   --main-bg-color: rgb(112, 112, 112);
 }
 
-html.small {
-  font-size: 14px;
-}
-
-html.medium {
-  font-size: 16px;
-}
-
-html.large {
-  font-size: 18px;
-}
-
-body.green {
+/* Start Custom Color */
+html[data-color="green"] {
   --main-color: rgb(40, 199, 111);
   --main-color-hover: rgb(40, 179, 111);
   --main-color-opacity: rgba(40, 199, 111, 0.3);
 }
 
-body.red {
+html[data-color="red"] {
   --main-color: rgb(234, 84, 85);
   --main-color-hover: rgb(214, 84, 85);
   --main-color-opacity: rgba(234, 84, 84, 0.3);
 }
 
-body.orange {
+html[data-color="orange"] {
   --main-color: rgb(255, 159, 67);
   --main-color-hover: rgb(235, 159, 67);
   --main-color-opacity: rgba(255, 159, 67, .3);
 }
 
-body.purple {
+html[data-color="purple"] {
   --main-color: rgb(115, 103, 240);
   --main-color-hover: rgb(115, 103, 220);
   --main-color-opacity: rgba(115, 103, 240, 0.5);
 }
 
-body.honey {
+html[data-color="honey"] {
   --main-color: rgb(234, 181, 67);
   --main-color-hover: rgb(214, 181, 67);
   --main-color-opacity: rgb(234, 181, 67, 0.3);
 }
+/* End Custom Color */
+
+/* Start Custom Font Size */
+html[data-font-size="small"] {
+  font-size: 14px;
+}
+
+html[data-font-size="medium"] {
+  font-size: 16px;
+}
+
+html[data-font-size="large"] {
+  font-size: 18px;
+}
+/* End Custom Font Size */
+
+/* Start Custom Font Family */
+html[data-font-family="cairo"] {
+  --main-font: 'Cairo', sans-serif;
+}
+
+html[data-font-family="mothnna"] {
+  --main-font: mothnna
+}
+
+html[data-font-family="cortoba"] {
+  --main-font: cortoba;
+}
+/* End Custom Font Family */
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -79,7 +98,7 @@ body.honey {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
+  background: var(--main-color-hover); 
 }
 
 * {
@@ -99,6 +118,10 @@ body {
 
 .bg-main:hover {
   background-color: var(--main-color-hover);
+  color: white;
+} 
+
+.bg-main::placeholder {
   color: white;
 }
 
@@ -892,31 +915,44 @@ input[type="radio"]:checked + .custom-radio:before {
   background-color: #eab543;
 }
 
-body.blue .choose-color .blue {
+.choose-font-family .cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+.choose-font-family .mothnna {
+  font-family: mothnna;
+}
+
+.choose-font-family .cortoba {
+  font-family: cortoba;
+}
+
+html[data-color="blue"] .choose-color .blue {
   transform: scale(1.2);
 }
 
-body.green .choose-color .green {
+html[data-color="green"] .choose-color .green {
   transform: scale(1.2);
 }
 
-body.red .choose-color .red {
+html[data-color="red"] .choose-color .red {
   transform: scale(1.2);
 }
 
-body.orange .choose-color .orange {
+html[data-color="orange"] .choose-color .orange {
   transform: scale(1.2);
 }
 
-body.purple .choose-color .purple {
+html[data-color="purple"] .choose-color .purple {
   transform: scale(1.2);
 }
 
-body.honey .choose-color .honey {
+html[data-color="honey"] .choose-color .honey {
   transform: scale(1.2);
 }
 
-.choose-font-size span {
+.choose-font-size span,
+.choose-font-family span {
   width: 70px;
   height: 40px;
   display: flex;
@@ -927,15 +963,32 @@ body.honey .choose-color .honey {
   cursor: pointer;
 }
 
-html.small .choose-font-size .small {
+html[data-font-size="small"] .choose-font-size .small {
   background-color: var(--main-color);
   color: white;
 }
-html.medium .choose-font-size .medium {
+
+html[data-font-size="medium"] .choose-font-size .medium {
   background-color: var(--main-color);
   color: white;
 }
-html.large .choose-font-size .large {
+
+html[data-font-size="large"] .choose-font-size .large {
+  background-color: var(--main-color);
+  color: white;
+}
+
+html[data-font-family="cairo"] .choose-font-family .cairo {
+  background-color: var(--main-color);
+  color: white;
+}
+
+html[data-font-family="mothnna"] .choose-font-family .mothnna {
+  background-color: var(--main-color);
+  color: white;
+}
+
+html[data-font-family="cortoba"] .choose-font-family .cortoba {
   background-color: var(--main-color);
   color: white;
 }

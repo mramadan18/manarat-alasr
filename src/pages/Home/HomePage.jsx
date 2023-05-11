@@ -37,7 +37,6 @@ const HomePage = () => {
       />
       <BrandsList />
       <Footer />
-
       <CustomTheme />
     </>
   );

@@ -75,7 +75,7 @@ const HeaderLaptop = () => {
                 <NavLink id="button_search">
                   <FontAwesomeIcon
                     icon={faSearch}
-                    className="position-absolute text-black"
+                    className="position-absolute text-white"
                   />
                 </NavLink>
               </div>
