@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { faCog, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CustomMode from "./CustomMode";
@@ -10,7 +10,11 @@ const CustomTheme = () => {
   const [showCustom, setShowCustom] = useState(false);
 
   return (
-    <div className={`custom py-2 d-flex flex-column ${showCustom && "show"}`}>
+    <div
+      className={`custom py-2 d-flex flex-column ${
+        showCustom ? "show" : "hide"
+      }`}
+    >
       <div
         className="cog position-absolute top-50 d-flex justify-content-center align-items-center rounded-end bg-main"
         onClick={() => setShowCustom(!showCustom)}

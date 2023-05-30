@@ -4,7 +4,14 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SliderProduct = ({ img, title, price, newProduct, vipProduct }) => {
+const SliderProduct = ({
+  img,
+  title,
+  price,
+  newProduct,
+  vipProduct,
+  isEmpty,
+}) => {
   return (
     <div className="product text-end">
       <div className="card position-relative">
@@ -24,8 +31,12 @@ const SliderProduct = ({ img, title, price, newProduct, vipProduct }) => {
           </div>
         </Link>
 
-        <div className="icons pt-3 pb-2 d-flex justify-content-center gap-3">
-          <FontAwesomeIcon icon={faCartPlus} />
+        <div className="icons pt-3 pb-2 d-flex justify-content-center align-items-center gap-3">
+          {isEmpty ? (
+            <div className="btn btn-sm btn-danger py-0">نفذت الكمية</div>
+          ) : (
+            <FontAwesomeIcon icon={faCartPlus} />
+          )}
           <FontAwesomeIcon icon={faHeart} />
         </div>
       </div>

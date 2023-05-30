@@ -445,13 +445,13 @@ img {
 /* End Header */
 
 /* Start Slider Ads */
-.slider-ads .swiper {
+.ads-slider .swiper {
   width: 100%;
   height: 100%;
   direction: rtl;
 }
 
-.slider-ads .swiper-slide {
+.ads-slider .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -460,29 +460,29 @@ img {
   align-items: center;
 }
 
-.slider-ads .swiper-slide img {
+.ads-slider .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.slider-ads .swiper-horizontal>.swiper-pagination-bullets,
-.slider-ads .swiper-pagination-bullets.swiper-pagination-horizontal,
-.slider-ads .swiper-pagination-custom,
-.slider-ads .swiper-pagination-fraction {
+.ads-slider .swiper-horizontal>.swiper-pagination-bullets,
+.ads-slider .swiper-pagination-bullets.swiper-pagination-horizontal,
+.ads-slider .swiper-pagination-custom,
+.ads-slider .swiper-pagination-fraction {
   bottom: 15px;
 }
 
-.slider-ads .swiper-pagination-bullet {
+.ads-slider .swiper-pagination-bullet {
   width: 18px;
   height: 4px;
   border-radius: 0;
   background-color: var(--main-color);
 }
 
-.slider-ads .swiper-button-prev, 
-.slider-ads .swiper-button-next {
+.ads-slider .swiper-button-prev, 
+.ads-slider .swiper-button-next {
   width: 40px;
   height: 40px;
   background-color: var(--main-color);
@@ -492,25 +492,25 @@ img {
 }
 
 
-.slider-ads .swiper-button-prev::after, 
-.slider-ads .swiper-button-next::after {
+.ads-slider .swiper-button-prev::after, 
+.ads-slider .swiper-button-next::after {
   font-size: 22px;
 } 
 
-.slider-ads .swiper-button-prev {
+.ads-slider .swiper-button-prev {
   right: -100% !important;
 }
 
-.slider-ads .swiper:hover .swiper-button-prev {
+.ads-slider .swiper:hover .swiper-button-prev {
   right: 10px !important;
 }
 
-.slider-ads .swiper-button-next {
+.ads-slider .swiper-button-next {
   left: -100% !important;
 }
 
 
-.slider-ads .swiper:hover .swiper-button-next {
+.ads-slider .swiper:hover .swiper-button-next {
   left: 10px !important;
 }
 /* End Slider Ads */
@@ -557,6 +557,10 @@ img {
   line-height: 15px;
   height: 32px;
   overflow: hidden;
+}
+
+.products-list .swiper-slide .icons {
+  height: 45px;
 }
 
 .products-list .swiper-slide .card-price {
@@ -831,7 +835,6 @@ button#retryButton {
 .custom {
   position: fixed;
   top: 0;
-  left: -400px;
   width: 400px;
   height: 100vh;
   z-index: 1000;
@@ -843,6 +846,10 @@ button#retryButton {
 
 .custom.show {
   left: 0;
+}
+
+.custom.hide {
+  left: -400px;
 }
 
 .custom .cog {

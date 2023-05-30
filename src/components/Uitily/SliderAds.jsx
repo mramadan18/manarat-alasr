@@ -11,7 +11,7 @@ import { Navigation, Pagination } from "swiper";
 
 const SliderAds = () => {
   return (
-    <div className="slider-ads">
+    <div className="ads-slider">
       <div className="container-fulid mb-2 mt-lg-2">
         <Swiper
           spaceBetween={30}

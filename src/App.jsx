@@ -16,6 +16,7 @@ import AddAddressPage from "./pages/Address/AddAddressPage";
 import EditAddressPage from "./pages/Address/EditAddressPage";
 import OrdersPage from "./pages/Orders/OrdersPage";
 import ReturnsPage from "./pages/Returns/ReturnsPage";
+import CheckoutPage from "./pages/Checkout/CheckoutPage";
 // Import components auth
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
@@ -23,7 +24,6 @@ import Message from "./components/Auth/Message";
 import Email from "./components/Auth/Email";
 // Import Global file css
 import "./App.css";
-import CheckoutPage from "./pages/Checkout/CheckoutPage";
 
 const App = () => {
   return (

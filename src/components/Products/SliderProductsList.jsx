@@ -12,7 +12,7 @@ import "swiper/css/free-mode";
 import { FreeMode } from "swiper";
 import SliderProduct from "./SliderProduct";
 
-const SliderProductsList = ({ title, titleBtn, path }) => {
+const SliderProductsList = ({ title, titleBtn, path, handleDragStart }) => {
   const [screenSize, setScreenSize] = useState(0);
 
   useEffect(() => {
@@ -102,14 +102,22 @@ const SliderProductsList = ({ title, titleBtn, path }) => {
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"/images/products/product-3.jpg"}
+              img={"/images/products/product-7.jpg"}
               title={"جهاز C i5  DELL  مستخدم مجدد مع الشاشة"}
               price={"1350 ريال"}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SliderProduct
-              img={"/images/products/product-4.jpg"}
+              img={"/images/products/product-8.jpg"}
+              title={"قطعة WiFi ALFA"}
+              price={"50 ريال"}
+              isEmpty={true}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SliderProduct
+              img={"/images/products/product-1.jpg"}
               title={"قطعة WiFi ALFA"}
               price={"50 ريال"}
               newProduct={true}
