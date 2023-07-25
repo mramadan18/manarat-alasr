@@ -11,8 +11,16 @@ import "swiper/css/free-mode";
 // import required modules
 import { FreeMode } from "swiper";
 import SliderProduct from "./SliderProduct";
+import BtnRemoveAndSortComp from "../Uitily/BtnRemoveAndSortComp";
+import { useRef } from "react";
 
-const SliderProductsList = ({ title, titleBtn, path, handleDragStart }) => {
+const SliderProductsList = ({
+  title,
+  titleBtn,
+  path,
+  handleDragStart,
+  handleDragEnd,
+}) => {
   const [screenSize, setScreenSize] = useState(0);
 
   useEffect(() => {
@@ -41,9 +49,16 @@ const SliderProductsList = ({ title, titleBtn, path, handleDragStart }) => {
       return 6.5;
     }
   };
+  const componentTarget = useRef();
 
   return (
-    <div className="container px-0">
+    <div
+      className="container mt-4 px-0 draggble"
+      ref={componentTarget}
+      onDragStart={() => handleDragStart(componentTarget)}
+      onDragEnd={() => handleDragEnd(componentTarget)}
+    >
+      <BtnRemoveAndSortComp target={componentTarget} />
       <div className="products-list mt-2">
         <SubTitle title={title} titleBtn={titleBtn} path={path} />
 

@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import BtnRemoveAndSortComp from "../Uitily/BtnRemoveAndSortComp";
 import Service from "./Service";
 import {
   faChalkboard,
@@ -6,9 +8,17 @@ import {
   faTruck,
 } from "@fortawesome/free-solid-svg-icons";
 
-const ServicesList = () => {
+const ServicesList = ({ handleDragStart, handleDragEnd }) => {
+  const componentTarget = useRef();
+
   return (
-    <div className="container">
+    <div
+      className="container mt-3 draggble"
+      ref={componentTarget}
+      onDragStart={() => handleDragStart(componentTarget)}
+      onDragEnd={() => handleDragEnd(componentTarget)}
+    >
+      <BtnRemoveAndSortComp target={componentTarget} />
       <div className="service-list my-2 px-2">
         <div className="row">
           <Service icon={faTruck} title={"توصيل سريع"} />

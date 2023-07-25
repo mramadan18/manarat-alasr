@@ -35,7 +35,7 @@ html[data-color="red"] {
 html[data-color="orange"] {
   --main-color: rgb(255, 159, 67);
   --main-color-hover: rgb(235, 159, 67);
-  --main-color-opacity: rgba(255, 159, 67, .3);
+  --main-color-opacity: rgba(255, 159, 67, 0.3);
 }
 
 html[data-color="purple"] {
@@ -67,18 +67,17 @@ html[data-font-size="large"] {
 
 /* Start Custom Font Family */
 html[data-font-family="cairo"] {
-  --main-font: 'Cairo', sans-serif;
+  --main-font: "Cairo", sans-serif;
 }
 
 html[data-font-family="mothnna"] {
-  --main-font: mothnna
+  --main-font: mothnna;
 }
 
 html[data-font-family="cortoba"] {
   --main-font: cortoba;
 }
 /* End Custom Font Family */
-
 
 /* width */
 ::-webkit-scrollbar {
@@ -87,18 +86,18 @@ html[data-font-family="cortoba"] {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #eee; 
+  background: #eee;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--main-color); 
+  background: var(--main-color);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--main-color-hover); 
+  background: var(--main-color-hover);
 }
 
 * {
@@ -119,7 +118,7 @@ body {
 .bg-main:hover {
   background-color: var(--main-color-hover);
   color: white;
-} 
+}
 
 .bg-main::placeholder {
   color: white;
@@ -130,14 +129,15 @@ body {
 }
 
 .border-main-1 {
-  border: 1px solid var(--main-color)
+  border: 1px solid var(--main-color);
 }
 
 .border-main-2 {
-  border: 2px solid var(--main-color)
+  border: 2px solid var(--main-color);
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: black;
   transition: all 0.3s ease-in-out;
@@ -147,7 +147,8 @@ a:hover {
   color: var(--main-color);
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -158,7 +159,11 @@ svg {
   cursor: pointer;
 }
 
-input, input:focus, textarea, textarea:focus, select {
+input,
+input:focus,
+textarea,
+textarea:focus,
+select {
   border: none;
   outline: none;
   box-shadow: none !important;
@@ -167,14 +172,43 @@ input, input:focus, textarea, textarea:focus, select {
   border: 1px solid #ced4da;
 }
 
-.input:focus, textarea:focus {
+.input:focus,
+textarea:focus {
   border: 1px solid var(--main-color);
 }
 
 img {
   max-width: 100%;
 }
+/* 
+.container {
+  transition: all 0.5s ease-in-out;
+} */
 
+.container.remove {
+  opacity: 0;
+  padding: 0;
+}
+
+.container.dragging {
+  opacity: 0.5;
+}
+
+.draggble {
+  padding: 1rem 0;
+}
+
+.draggble:hover {
+  border: 1px solid var(--main-color);
+}
+
+.draggble .icon-plus {
+  display: none;
+}
+
+.draggble:hover .icon-plus {
+  display: block;
+}
 
 @media (max-width: 786px) {
   body {
@@ -327,12 +361,12 @@ img {
   z-index: 55555;
   width: 85%;
   height: 100%;
-  background-color: #ECECEC;
+  background-color: #ececec;
   transition: all 0.3s linear;
 }
 
 .mobile .menu .info_phone a {
-  font-size: 0.80rem;
+  font-size: 0.8rem;
 }
 
 .mobile .dropdown {
@@ -354,9 +388,8 @@ img {
 }
 
 .mobile .dropdown .dropdown-item svg {
-  margin-left: 0.50rem;
+  margin-left: 0.5rem;
 }
-
 
 .mobile .dropdown .dropdown-item a.active svg {
   color: white;
@@ -467,7 +500,7 @@ img {
   object-fit: cover;
 }
 
-.ads-slider .swiper-horizontal>.swiper-pagination-bullets,
+.ads-slider .swiper-horizontal > .swiper-pagination-bullets,
 .ads-slider .swiper-pagination-bullets.swiper-pagination-horizontal,
 .ads-slider .swiper-pagination-custom,
 .ads-slider .swiper-pagination-fraction {
@@ -481,7 +514,7 @@ img {
   background-color: var(--main-color);
 }
 
-.ads-slider .swiper-button-prev, 
+.ads-slider .swiper-button-prev,
 .ads-slider .swiper-button-next {
   width: 40px;
   height: 40px;
@@ -491,11 +524,10 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-
-.ads-slider .swiper-button-prev::after, 
+.ads-slider .swiper-button-prev::after,
 .ads-slider .swiper-button-next::after {
   font-size: 22px;
-} 
+}
 
 .ads-slider .swiper-button-prev {
   right: -100% !important;
@@ -508,7 +540,6 @@ img {
 .ads-slider .swiper-button-next {
   left: -100% !important;
 }
-
 
 .ads-slider .swiper:hover .swiper-button-next {
   left: 10px !important;
@@ -569,7 +600,10 @@ img {
 /* End Slider Products */
 
 /* Start Auth */
-.choose-auth, .login, .signup, .sms {
+.choose-auth,
+.login,
+.signup,
+.sms {
   font-size: 1rem;
   width: 60%;
 }
@@ -614,7 +648,10 @@ button#retryButton {
 }
 
 @media (max-width: 768px) {
-  .choose-auth, .login, .signup, .sms  {
+  .choose-auth,
+  .login,
+  .signup,
+  .sms {
     width: 100% !important;
   }
 }
@@ -622,7 +659,8 @@ button#retryButton {
 
 /* Start Account */
 @media (max-width: 768px) {
-  .account-item, title {
+  .account-item,
+  title {
     width: 100% !important;
   }
 }
@@ -642,7 +680,6 @@ button#retryButton {
   left: -150px;
   transition: all 0.3s ease-in-out;
 }
-
 
 .address:hover .actions {
   left: 10px;
@@ -734,7 +771,6 @@ button#retryButton {
   border: 1px solid #565656;
 }
 
-
 .product-details .mySwiper .swiper-slide img {
   width: 70%;
   height: 90%;
@@ -772,7 +808,7 @@ button#retryButton {
 }
 
 .list img {
-  max-width: 240px
+  max-width: 240px;
 }
 
 .list .card-price {
@@ -795,7 +831,7 @@ button#retryButton {
 
 @media (max-width: 576px) {
   .list img {
-    max-width: 160px
+    max-width: 160px;
   }
   .list .card-body {
     text-align: right;
@@ -903,7 +939,7 @@ input[type="radio"]:checked + .custom-radio:before {
 }
 
 .choose-color span:nth-child(2) {
-  background-color: #28C76F;
+  background-color: #28c76f;
 }
 
 .choose-color span:nth-child(3) {
@@ -915,7 +951,7 @@ input[type="radio"]:checked + .custom-radio:before {
 }
 
 .choose-color span:nth-child(5) {
-  background-color: #7367F0;
+  background-color: #7367f0;
 }
 
 .choose-color span:last-child {
@@ -923,7 +959,7 @@ input[type="radio"]:checked + .custom-radio:before {
 }
 
 .choose-font-family .cairo {
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .choose-font-family .mothnna {
