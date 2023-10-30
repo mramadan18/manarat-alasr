@@ -6,55 +6,125 @@ import ServicesList from "../../components/Service/ServicesList";
 import BrandsList from "../../components/Brand/BrandsList";
 import Footer from "../../components/Footer/Footer";
 import CustomTheme from "../../components/Custom/CustomTheme";
-import { useRef } from "react";
+import { useState } from "react";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const HomePage = () => {
-  const dragOverDiv = useRef();
+  const [components, setComponents] = useState([
+    {
+      id: "1",
+      content: <CategoryList categoryType="software" />,
+    },
+    {
+      id: "2",
+      content: (
+        <SliderProductsList
+          title="الأكثر مبيعا"
+          titleBtn="عرض الكل"
+          path="/products"
+        />
+      ),
+    },
+    {
+      id: "3",
+      content: <ServicesList />,
+    },
+    {
+      id: "4",
+      content: <CategoryList categoryType="device" />,
+    },
+    {
+      id: "5",
+      content: (
+        <SliderProductsList
+          title="الأجهزة والطابعات"
+          titleBtn="عرض الكل"
+          path="/products"
+        />
+      ),
+    },
+    {
+      id: "6",
+      content: (
+        <SliderProductsList
+          title="الأحبار"
+          titleBtn="عرض الكل"
+          path="/products"
+        />
+      ),
+    },
+    {
+      id: "7",
+      content: (
+        <SliderProductsList
+          title="الأكسسوارات"
+          titleBtn="عرض الكل"
+          path="/products"
+        />
+      ),
+    },
+    {
+      id: "8",
+      content: <BrandsList />,
+    },
+  ]);
 
-  const handleDragStart = ({ current }) => {
-    current.classList.add("dragging");
-  };
+  function handleOnDragEnd(result) {
+    if (!result.destination) return;
 
-  const handleDragOver = (e) => {
-    const afterElement = getDragAfterElement(dragOverDiv.current, e.clientY);
-    const draggable = document.querySelector(".dragging");
-    if (afterElement === null) {
-      dragOverDiv.current.appendChild(draggable);
-    } else {
-      dragOverDiv.current.insertBefore(draggable, afterElement);
-    }
-  };
+    const items = Array.from(components);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
 
-  const getDragAfterElement = (container, y) => {
-    const draggableElements = [
-      ...container.querySelectorAll(".draggble:not(.dragging)"),
-    ];
-
-    return draggableElements.reduce(
-      (closest, child) => {
-        const box = child.getBoundingClientRect();
-        const offset = y - box.top - box.height / 2;
-        if (offset < 0 && offset > closest.offset) {
-          return { offset: offset, element: child };
-        } else {
-          return closest;
-        }
-      },
-      { offset: Number.NEGATIVE_INFINITY }
-    ).element;
-  };
-
-  const handleDragEnd = ({ current }) => {
-    current.classList.remove("dragging");
-    current.setAttribute("draggable", "false");
-    current.style.boxShadow = "none";
-  };
+    setComponents(items);
+  }
 
   return (
     <>
       <Header />
       <SliderAds />
-      <div className="drag-over" ref={dragOverDiv} onDragOver={handleDragOver}>
+      <DragDropContext onDragEnd={handleOnDragEnd}>
+        <Droppable droppableId="components">
+          {(provided) => (
+            <div
+              className="container-dragble"
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+            >
+              {components.map(({ id, content }, index) => {
+                return (
+                  <Draggable key={id} draggableId={id} index={index}>
+                    {(provided) => (
+                      <div
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                      >
+                        {content}
+                      </div>
+                    )}
+                  </Draggable>
+                );
+              })}
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      </DragDropContext>
+      {/* {components.map((component, index) => {
+        return (
+          <div
+            key={index}
+            draggable={true}
+            onDragStart={(e) => handleDragStart(e, index)}
+            onDragOver={(e) => handleDragOver(e)}
+            onDrop={(e) => handleDrop(e, index)}
+          >
+            {component.content}
+          </div>
+        );
+      })} */}
+      {/* <div className="drag-over" ref={dragOverDiv} onDragOver={handleDragOver}>
         <CategoryList
           categoryType="software"
           handleDragStart={handleDragStart}
@@ -101,7 +171,7 @@ const HomePage = () => {
           handleDragStart={handleDragStart}
           handleDragEnd={handleDragEnd}
         />
-      </div>
+      </div> */}
       <Footer />
       <CustomTheme />
     </>

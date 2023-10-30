@@ -180,34 +180,14 @@ textarea:focus {
 img {
   max-width: 100%;
 }
-/* 
-.container {
-  transition: all 0.5s ease-in-out;
-} */
+
+.container-dragble > div {
+  margin-top: 4rem;
+}
 
 .container.remove {
   opacity: 0;
   padding: 0;
-}
-
-.container.dragging {
-  opacity: 0.5;
-}
-
-.draggble {
-  padding: 1rem 0;
-}
-
-.draggble:hover {
-  border: 1px solid var(--main-color);
-}
-
-.draggble .icon-plus {
-  display: none;
-}
-
-.draggble:hover .icon-plus {
-  display: block;
 }
 
 @media (max-width: 786px) {

@@ -1,18 +1,10 @@
-import { useRef } from "react";
 import BtnRemoveAndSortComp from "../Uitily/BtnRemoveAndSortComp";
 import Category from "./Category";
 
-const CategoryList = ({ categoryType, handleDragStart, handleDragEnd }) => {
-  const componentTarget = useRef();
-
+const CategoryList = ({ categoryType }) => {
   return (
-    <div
-      className="container draggble"
-      ref={componentTarget}
-      onDragStart={() => handleDragStart(componentTarget)}
-      onDragEnd={() => handleDragEnd(componentTarget)}
-    >
-      <BtnRemoveAndSortComp target={componentTarget} />
+    <div className="container">
+      <BtnRemoveAndSortComp />
       <div className="categories-list d-flex justify-content-around my-2">
         {categoryType === "software" ? (
           <>

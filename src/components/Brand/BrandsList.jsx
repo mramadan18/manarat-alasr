@@ -11,9 +11,8 @@ import "swiper/css/free-mode";
 // import required modules
 import { FreeMode } from "swiper";
 import BtnRemoveAndSortComp from "../Uitily/BtnRemoveAndSortComp";
-import { useRef } from "react";
 
-const BrandsList = ({ handleDragStart, handleDragEnd }) => {
+const BrandsList = () => {
   const [screenSize, setScreenSize] = useState(0);
 
   useEffect(() => {
@@ -42,16 +41,10 @@ const BrandsList = ({ handleDragStart, handleDragEnd }) => {
       return 6;
     }
   };
-  const componentTarget = useRef();
 
   return (
-    <div
-      className="container draggble"
-      ref={componentTarget}
-      onDragStart={() => handleDragStart(componentTarget)}
-      onDragEnd={() => handleDragEnd(componentTarget)}
-    >
-      <BtnRemoveAndSortComp target={componentTarget} />
+    <div className="container">
+      <BtnRemoveAndSortComp />
       <div className="brands-list py-4">
         <Swiper
           spaceBetween={10}
